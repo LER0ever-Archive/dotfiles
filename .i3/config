@@ -282,9 +282,12 @@ exec --no-startup-id fcitx
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
 #exec --no-startup-id start_conky_maia
-exec --no-startup-id conky -c ~/.config/conky/conky_topright
-exec --no-startup-id conky -c ~/.config/conky/conky_bottomleft
-exec --no-startup-id conky -c ~/.config/conky/conky_topleft
+exec --no-startup-id conky -c ~/.config/conky/conky_cherubim
+exec --no-startup-id conky -c ~/.config/conky/conky_i3shortcuts
+exec --no-startup-id conky -c ~/.config/conky/conky_weather
+exec --no-startup-id conky -c ~/.config/conky/conky_rss
+exec --no-startup-id conky -c ~/.config/conky/conky_status
+exec --no-startup-id conky -c ~/.config/conky/conky_webmonitor
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id fix_xcursor
@@ -300,7 +303,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font xft:Noto Sans 10.5
+	font xft:Noto Sans 12.5
 	strip_workspace_numbers yes
 
 	colors {
