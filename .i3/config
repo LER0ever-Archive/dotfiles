@@ -281,7 +281,10 @@ exec --no-startup-id clipit
 exec --no-startup-id fcitx
 # exec --no-startup-id blueman
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+#exec --no-startup-id start_conky_maia
+exec --no-startup-id conky -c ~/.config/conky/conky_topright
+exec --no-startup-id conky -c ~/.config/conky/conky_bottomleft
+exec --no-startup-id conky -c ~/.config/conky/conky_topleft
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id fix_xcursor
