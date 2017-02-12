@@ -32,7 +32,7 @@ now = datetime.now()
 ######################
 #  Changeable stuff  #
 ######################
-yourAPIID = "2ff7748866bc********************"
+yourAPIID = "2ff7748866bc863f774d4d78ed56b62c"
 yourCITYID = "5261457"
 yourUNITS = "metric"
 
@@ -50,9 +50,9 @@ forecast = '/tmp/conky_forecast.xml'
 
 # Checking the last time an update was made
 update_file = True
-if os.path.isfile(currentweather) and os.path.isfile(forecast):
- last_update = parse(time.ctime(os.path.getmtime(currentweather)))
- update_file = update >= last_update
+#if os.path.isfile(currentweather) and os.path.isfile(forecast):
+# last_update = parse(time.ctime(os.path.getmtime(currentweather)))
+# update_file = update >= last_update
 
 if update_file:
  urllib.urlretrieve("http://api.openweathermap.org/data/2.5/weather?id=" + yourCITYID + "&APPID=" + yourAPIID + "&mode=xml&units=" + yourUNITS + "", currentweather)

@@ -39,4 +39,4 @@ ${font}WEATHER${font} ${hr 2}
 #${catp /tmp/conky_weather_results}
 ${execp cat /tmp/conky_weather_results}
 ${execi 30 python2 /home/everette/.config/conky/weather_update.py}
-${exec kill -CONT $(pidof conky)}
+#${exec kill -CONT $(pidof conky)}
