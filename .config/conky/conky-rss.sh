@@ -36,7 +36,11 @@ else
 	curl -s --connect-timeout 30 $uri |\
 	sed -e 's/<\/title>/\n/g' |\
 	grep -o '<title>.*' |\
+	grep -v 'rss' |\
 	sed -e 's/<title>//' |\
+	sed -e 's/&#8211;/-/' |\
+	sed -e 's/<!\[CDATA\[//' |\
+	sed -e 's/]]//' |\
 	head -n $(($lines + $titlenum)) |\
 	tail -n $(($lines))
 fi
