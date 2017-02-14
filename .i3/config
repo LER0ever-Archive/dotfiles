@@ -26,6 +26,11 @@ font xft:Noto Sans 10
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+###############################################################################################
+## Set up path for scripting
+###############################################################################################
+exec export PATH="$PATH:~/.bin"
+
 # start a terminal
 # bindsym $mod+Return exec terminal
 bindsym $mod+Return exec terminator
@@ -269,7 +274,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id i3lock -f #blurlock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -289,7 +294,7 @@ exec --no-startup-id conky -c ~/.config/conky/conky_rss
 exec --no-startup-id conky -c ~/.config/conky/conky_status
 exec --no-startup-id conky -c ~/.config/conky/conky_webmonitor
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker "i3lock -f" #blurlock
 exec_always --no-startup-id fix_xcursor
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
